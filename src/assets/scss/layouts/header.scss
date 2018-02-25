@@ -1,0 +1,43 @@
+.app-header {
+    .block {
+        padding: 9vh 16vw;
+        .brand {
+            display: flex;
+            align-items: center;
+            a, a b{
+                font-size: 35px;
+                color: #444444;
+                text-decoration: none;
+            }
+        }
+        .menu {
+            text-align: center;
+            .col {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    font-size: 18px;
+                    color: #444444;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 960px) {
+    .app-header {
+        .block {
+            padding: 9vh 5vw !important;
+        }
+    }  
+}
+@media screen and (min-width: 960px) and (max-width: 1140px) {
+    .app-header {
+        .block {
+            padding: 9vh 5vw !important;
+        }
+    } 
+}
+
+
