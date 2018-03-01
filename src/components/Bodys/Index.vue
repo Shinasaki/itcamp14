@@ -81,24 +81,125 @@
                             </span>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <!-- <div class="row m-0 content text-center">
-                        <div class="col profit sponsor-small">
-                            <div class="circle"></div>
-                            <span>ต่อสายแลน</span>
-                        </div>
-                        <div class="col profit sponsor-small">
-                            <div class="circle"></div>
-                            <span>ต่อสายแลน</span>
-                        </div>
-                        <div class="col profit sponsor-small">
-                            <div class="circle"></div>
-                            <span>ต่อสายแลน</span>
-                        </div>
-                    </div> -->
+                    <ul class="content">
+                            <li>
+                                <div class="circle"></div>
+                                <div>ต่อสายแลน</div>
+                            </li>
+                            <li>
+                                <div class="circle"></div>
+                                <div>ต่อสายแลน</div>
+                            </li>
+                             <li>
+                                <div class="circle"></div>
+                                <div>ต่อสายแลน</div>
+                            </li>
+                    </ul>
                     <div class="clearfix"></div>
                 </div>
             </div>
+        </div>
+        <div class="section5 space">
+            <div class="block">
+                <div class="introduct">
+                    <div class="introduct">
+                        <div class="row m-0">
+                            <div class="col">
+                                <span class="dash"></span>
+                                <span>HIGHLIGHT</span> <br>
+                                <p>SNEAK INSIDE<br>THE SHIP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-0 m-0 slide-show">
+                    <div class="col-10 col-sm">
+                    </div>
+                    <div class="col-10 col-sm">
+                    </div>
+                    <div class="col-10 col-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section6 space">
+            <div class="block">
+                <div class="introduct">
+                    <div class="introduct">
+                        <div class="row m-0">
+                            <div class="col">
+                                <span class="dash"></span>
+                                <span>SCHEDULE</span> <br>
+                                <p>NOW<br>RECRUITING</p>
+                                <span>14 - 31 FEB 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section7">
+            <div class="block space">
+                <div class="introduct">
+                    <div class="introduct">
+                        <div class="row m-0">
+                            <div class="col">
+                                <span class="dash"></span>
+                                <span>GALLERY</span> <br>
+                                <p>MESSAGE FROM<br>THE SKY</p>
+                                <span>SHERE YOUR THOUGHT VIA#ITCAMP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-scroll">
+                <div class="block-social">
+                    <div class="social-contain">
+                        <ul v-for="ul in 8">
+                            <li>
+                                <div class="box" v-if="ul%2 != 0">
+                                    <div class="box-small"></div>
+                                    <div class="box-big"></div>
+                                </div>
+                                <div class="box" v-if="ul%2 == 0">
+                                    <div class="box-big"></div>
+                                    <div class="box-small"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section8 space">
+            <div class="block">
+                <div class="introduct">
+                    <div class="introduct">
+                        <div class="row m-0">
+                            <div class="col">
+                                <span class="dash"></span>
+                                <span>FAQ</span> <br>
+                                <p>ASK THE BOT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-chat">
+                <div class="chat">
+                    <!-- <div class="row m-0" v-for="row in 5">
+                        <div class="col-5 msg message1" v-if="row%2 != 0">
+                        </div>
+                        <div class="col-5 msg message2" v-if="row%2 == 0">
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <br>
+            <br>
+            <hr style="background: #fff; height: 1.5px; border-radius: 5px;">
+            <span style="color: #fff; font-size: 30px;">ITCAMP<b style="color: #fff; font-size: 30px;">14</b></span>
         </div>
     </div>
 </template>
@@ -108,20 +209,8 @@ import $ from 'jQuery'
 import '@scss/bodys/index.scss'
 
 
-// $(function() {
-//     makeCircle($('.sponsor-big .circle'));
-//     makeCircle($('.sponsor-small .circle'));
-// })
-
-// $(window).resize(function() {
-//     makeCircle($('.sponsor-big .circle'));
-//     makeCircle($('.sponsor-small .circle'));
-// })
-
-
 function makeCircle(elm) {
-    var width = elm.outerWidth();
-    console.log(width);
+    var width = elm.innerWidth();
     elm.css('height', width + 'px');
 }
 
