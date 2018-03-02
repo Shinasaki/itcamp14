@@ -5,6 +5,10 @@
             p {
                 font-size: 10vw;
                 font-weight: bold;
+                background-image: url('../../images/section2-bg.png');
+                background-position: center;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
             }
             span:first-of-type {
                 font-size: 35px;

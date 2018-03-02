@@ -1,8 +1,8 @@
 <template>
     <div class="app-index">
         <div class="section1 space">
-            <div class="introduct">
-                <p>INTO THE SKY</p>
+            <div class="introduct ">
+                <p class="hover-underline-animation">INTO THE SKY</p>
                 <span>31 MAY - 3 JUNE 2018</span> <br>
                 <span>FACULTY OF INFORMATION TECHNOLOGY</span> <br>
                 <span>KING MONGKUT'S INSTITUTE OF TECHNOLOGY LADKRABANG</span>
@@ -231,6 +231,39 @@ export default {
 </script>
 
 <style>
-	.st0{fill:#FFFFFF;}
+    .hover-underline-animation {
+        display: inline-block;
+        position: relative;
+        color: #ccc;
+    }
+    .hover-underline-animation::after {
+        font-size: 10px;
+        content: '';
+        position: absolute;
+        width: 103%;
+        transform: scaleX(0);
+        /* height: 24px; */
+        top: 0;
+        bottom: 0;
+        left: -3px;
+        background-color: rgb(255, 231, 94);
+        /* transform-origin: top right; */
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+    }
+    :root {
+        --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    .hover-underline-animation::after {
+        /* transform: scaleX(1); */
+        /* transform-origin: top left; */
+        animation: bgslider 1.2s var(--ease-in-out-circ);
+    }
+    @keyframes bgslider {
+        0% { transform: scaleX(0); transform-origin: top left; }
+        54% { transform: scaleX(1); transform-origin: top left; }
+        55% { transform: scaleX(1); transform-origin: top right; }
+        100% { transform: scaleX(0); transform-origin: top right; }
+    }
 </style>
 
